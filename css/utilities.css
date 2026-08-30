@@ -1,0 +1,128 @@
+.container-1240px{
+    max-width: 1240px;
+    margin: 0px auto;
+}
+.container-1370px{
+    max-width: 1370px;
+    margin: 0px auto;
+}
+
+
+
+
+
+/* font-family */
+.wm-font-man{
+    font-family: "Manrope", sans-serif;
+}
+.wm-font-cf{
+    font-family: 'Articulat CF', sans-serif
+}
+
+
+
+
+
+/* font-size */
+.wm-font-60px{
+    font-size: 60px;
+}
+.wm-font-16px{
+    font-size: 16px;
+}
+.wm-font-15px{
+    font-size: 15px;
+}
+.wm-font-40px{
+    font-size: 40px;
+}
+.wm-font-18px{
+    font-size: 18px;
+}
+.wm-font-25px{
+    font-size: 25px;
+}
+.wm-font-120px{
+    font-size: 120px;
+}
+.wm-font-30px{
+    font-size: 30px;
+}
+.wm-font-14px{
+    font-size: 14px;
+}
+.wm-font-14px{
+    font-size: 14px;
+}
+.wm-font-14px{
+    font-size: 14px;
+}
+
+
+
+
+
+
+/* flex box */
+.wm-flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wm-flex {
+    display: flex;
+}
+.wm-align-center {
+    align-items: center;
+}
+.wm-justify-between {
+    justify-content: space-between;
+}
+.wm-flex-col {
+    flex-direction: column;
+}
+.wm-flex-grow-1{
+    flex-grow: 1;
+}
+
+
+
+
+
+
+.wm-uppercase {
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+.wm-position-relative{
+    position: relative;
+}
+.wm-position-absolute{
+    position: absolute;
+}
+
+
+.wm-text-center {
+    text-align: center;
+}
+
+.wm-text-end {
+    text-align: end;
+}
+
+.wm-pointer {
+    cursor: pointer;
+}
+
+.wm-width-100 {
+    width: 100%;
+}
+
+.wm-text-nowrap {
+    text-wrap: nowrap;
+}

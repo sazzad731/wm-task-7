@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*, *::after, *::before{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+
+@font-face {
+    font-family: 'Articulat CF';
+    src: url("../assets/fonts/ArticulatCF-Heavy.otf") format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url("../assets/fonts/ArticulatCF-ExtraBold.otf") format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url("../assets/fonts/ArticulatCF-Bold.otf") format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url("../assets/fonts/ArticulatCF-DemiBold.otf") format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url("../assets/fonts/ArticulatCF-Medium.otf") format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url("../assets/fonts/ArticulatCF-Regular.otf") format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url("../assets/fonts/ArticulatCF-Light.otf") format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url("../assets/fonts/ArticulatCF-ExtraLight.otf") format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Articulat CF';
+    src: url("../assets/fonts/ArticulatCF-Thin.otf") format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+
+
+
+
+:root{
+    --color-vege: #1D4933;
+    --color-energy: #E7FD83;
+    --color-root: #38332E;
+    --color-stone: #CED2BB;
+    --color-aqua: #A5C4FF;
+    --color-white: #FFFFFF;
+    --color-haze: #F5F3ED;
+}
