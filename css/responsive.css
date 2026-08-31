@@ -1,0 +1,49 @@
+@media screen and (max-width: 1370px) {
+    .container-1370px{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 1240px) {
+    .container-1240px{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+
+@media screen and (max-width: 440px) {
+    /* hero section */
+    .hero-content{
+        flex-direction: column;
+        gap: 170px;
+    }
+    .hero-btn-div{
+        gap: 40px;
+    }
+    .wm-btn{
+        font-size: 13.65px;
+        gap: 9.1px;
+        padding: 13px 27.3px 13px 22.75px;
+        border-radius: 27.3px;
+    }
+    .wm-dot-link{
+        font-size: 13.78px;
+        gap: 4.56px;
+    }
+
+
+
+
+
+    .section-header{
+        flex-direction: column;
+    }
+    .section-header-right-p-div{
+        flex-direction: column;
+        gap: 16px;
+    }
+}
