@@ -115,7 +115,7 @@
 
 
 /* slide section 1 */
-.swiper-slide{
+.slide-section-1-slide{
     padding-top: 130px;
     background-color: var(--color-white);
 }
@@ -128,13 +128,14 @@
 
 }
 
-.swiper-pagination{
+.slide-section-1-pagination{
     display: flex;
     top: 0 !important;
     left: 0 !important;
+    gap: 10px;
 }
 
-.swiper-pagination-bullet {
+.slide-section-1-bullet {
     width: 40px !important;
     height: 40px !important;
     text-align: center;
@@ -148,14 +149,17 @@
     display: flex !important;
     align-items: center;
     justify-content: center;
-    transition: all .3s;
+    transition: all 1s;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
 }
-.swiper-pagination-bullet:hover{
+.slide-section-1-bullet:hover{
     background: var(--color-aqua) !important;
     color: var(--color-white) !important;
 }
 
-.swiper-pagination-bullet-active {
+.slide-section-1-bullet-active {
     color: var(--color-white) !important;
     background: var(--color-aqua) !important;
 }
@@ -226,6 +230,22 @@
 .leaf-p3{
     bottom: clamp(55px, calc(-46.673px + 27.041vw), 161px);
     right: clamp(-5px, calc(-44.327px + 10.459vw), 36px);
+}
+
+
+
+
+
+
+
+/* slide section 2 */
+.slide-2-section{
+    height: 838px;
+}
+.swiper-tow-slide{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
