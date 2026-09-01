@@ -132,12 +132,31 @@
     <!-- footer section -->
     <footer class="wm-bg-vege wm-pt-120px wm-pb-76px">
         <div class="container-1240px">
-            <div>
+            <div class="wm-mb-70px">
                 <div class="footer-social-mobile">
-
+                    <div class="wm-flex wm-justify-between wm-align-center wm-gap-70px wm-mb-83px social-lang-div">
+                        <div class="wm-flex-center wm-gap-7px">
+                            <a href="#" class="wm-bg-energy wm-flex-center footer-social-icon-a">
+                                <img src="./assets/icons/fb.svg" alt="icons">
+                            </a>
+                            <a href="#" class="wm-bg-energy wm-flex-center footer-social-icon-a">
+                                <img src="./assets/icons/insta.svg" alt="icons">
+                            </a>
+                            <a href="#" class="wm-bg-energy wm-flex-center footer-social-icon-a">
+                                <img src="./assets/icons/youtube.svg" alt="icons">
+                            </a>
+                            <a href="#" class="wm-bg-energy wm-flex-center footer-social-icon-a">
+                                <img src="./assets/icons/linkedin.svg" alt="icons">
+                            </a>
+                        </div>
+                        <div class="wm-flex-center wm-gap-10px footer-mobile-lang-div">
+                            <button class="wm-font-cf wm-font-500 wm-font-25px wm-line-120 wm-color-stone language-btn active">SK</button>
+                            <button class="wm-font-cf wm-font-500 wm-font-25px wm-line-120 wm-color-stone language-btn">EN</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="wm-flex wm-justify-between wm-flex-wrap">
-                    <div>
+                <div class="wm-flex wm-justify-between wm-flex-wrap wm-gap-100px footer-top-links-div">
+                    <div class="wm-width-150px">
                         <h5 class="wm-font-500 wm-font-18px wm-line-120 wm-uppercase wm-color-energy wm-mb-20px">Vízia</h5>
                         <ul class="wm-flex wm-flex-col wm-gap-15px">
                             <li><a class="wm-font-500 wm-font-16px wm-line-135 wm-color-energy" href="#">Naša misia</a></li>
@@ -196,9 +215,9 @@
                 </div>
             </div>
 
-            <div>
+            <div class="wm-flex wm-justify-between wm-mb-70px">
                 <div class="wm-max-width-505px">
-                    <h4 class="wm-font-cf wm-font-500 wm-font-25px wm-line-120 wm-color-energy wm-mb-30px">Newsletter s vôňou pôdy</h4>
+                    <h4 class="wm-font-cf wm-font-500 wm-font-25px wm-line-120 wm-color-energy wm-mb-30px newsletter-h4">Newsletter s vôňou pôdy</h4>
 
                     <div class="wm-flex wm-align-center wm-gap-15px wm-mb-10px">
                         <input class="footer-input first-name" type="text" name="first-name" placeholder="Meno*">
@@ -207,22 +226,89 @@
 
                     <div class="wm-flex wm-justify-between wm-bg-haze wm-radius-30px wm-mb-20px">
                         <input class="footer-input wm-width-100" type="email" name="email" placeholder="Váš e-mail*">
-                        <button class="wm-btn wm-bg-aqua"><span class="wm-btn-dot"></span>odoberať</button>
+                        <button class="wm-btn wm-bg-aqua subscribe-btn-desk"><span class="wm-btn-dot"></span>odoberať</button>
                     </div>
-
                     <div>
                         <div class="wm-flex wm-align-start wm-gap-15px">
-                            <input class="email-checkbox" type="checkbox" id="email-radio">
+                            <label class="custome-radio">
+                                <input class="email-checkbox" type="checkbox" checked id="email-radio">
+                                <span class="checkmark"></span>
+                            </label>
                             <label class="wm-font-500 wm-font-14px wm-line-135 wm-color-stone" for="email-radio">
                                 *Odoslaním mojej emailovej adresy súhlasím s jej spracúvaním na posielanie Newslettra emailom. Viac informácií v
                                 sekcii
-                                <a class="wm-font-500 wm-font-14px wm-line-135 wm-color-stone wm-border-b-1px-stone" href="#">
+                                <a class="wm-font-500 wm-font-14px wm-line-135 wm-color-stone wm-inline wm-border-b-1px-stone" href="#">
                                     Zásady spracúvania osobných údajov.
                                 </a>
                             </label>
                         </div>
+                        <div class="subscribe-btn-mobile">
+                            <button class="wm-btn wm-bg-aqua"><span class="wm-btn-dot"></span>odoberať</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="newsletter-right-div">
+                    <div class="wm-flex wm-justify-between wm-align-center wm-gap-70px wm-mb-83px">
+                        <div class="wm-flex-center wm-gap-7px">
+                            <a href="#" class="wm-bg-energy wm-flex-center footer-social-icon-a">
+                                <img src="./assets/icons/fb.svg" alt="icons">
+                            </a>
+                            <a href="#" class="wm-bg-energy wm-flex-center footer-social-icon-a">
+                                <img src="./assets/icons/insta.svg" alt="icons">
+                            </a>
+                            <a href="#" class="wm-bg-energy wm-flex-center footer-social-icon-a">
+                                <img src="./assets/icons/youtube.svg" alt="icons">
+                            </a>
+                            <a href="#" class="wm-bg-energy wm-flex-center footer-social-icon-a">
+                                <img src="./assets/icons/linkedin.svg" alt="icons">
+                            </a>
+                        </div>
+                        <div class="wm-flex-center wm-gap-10px">
+                            <button class="wm-font-cf wm-font-500 wm-font-25px wm-line-120 wm-color-stone language-btn active">SK</button>
+                            <button class="wm-font-cf wm-font-500 wm-font-25px wm-line-120 wm-color-stone language-btn">EN</button>
+                        </div>
                     </div>
 
+                    <div>
+                        <div class="wm-flex wm-justify-end wm-width-100 wm-mb-48px">
+                            <a href="#">
+                                <img src="./assets/images/primary-logo-AGROKRUH.png" alt="logo">
+                            </a>
+                        </div>
+
+                        <div class="wm-flex wm-flex-col wm-align-end">
+                            <div class="wm-flex-center wm-gap-10px wm-mb-5px">
+                                <span class="wm-font-500 wm-font-14px wm-line-135 wm-color-energy">created by</span>
+                                <img src="./assets/images/logo_boomex.png" alt="logo">
+                            </div>
+                            <p class="wm-font-500 wm-font-14px wm-line-135 wm-color-energy">&copy;2025 Agrokruh</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="wm-flex wm-align-center wm-justify-between wm-flex-wrap wm-gap-20px wm-mb-70px">
+                <li><a class="wm-dot-link wm-color-stone wm-border-b-1px-stone" href="#"><span class="wm-dot-link-dot wm-bg-stone wm-mb-3px"></span>Podmienky používania</a></li>
+                <li><a class="wm-dot-link wm-color-stone wm-border-b-1px-stone" href="#"><span class="wm-dot-link-dot wm-bg-stone wm-mb-3px"></span>Ochrana osobných údajov</a></li>
+                <li><a class="wm-dot-link wm-color-stone wm-border-b-1px-stone" href="#"><span class="wm-dot-link-dot wm-bg-stone wm-mb-3px"></span>Súhlas na marketingové oslovovanie</a></li>
+                <li><a class="wm-dot-link wm-color-stone wm-border-b-1px-stone" href="#"><span class="wm-dot-link-dot wm-bg-stone wm-mb-3px"></span>Zásady využívania cookies</a></li>
+                <li><a class="wm-dot-link wm-color-stone wm-border-b-1px-stone" href="#"><span class="wm-dot-link-dot wm-bg-stone wm-mb-3px"></span>Nastavenia cookies</a></li>
+            </ul>
+
+            <div class="logo-created-by-mobile">
+                <div class="wm-flex wm-justify-end wm-width-100 wm-mb-48px">
+                    <a href="#">
+                        <img src="./assets/images/primary-logo-AGROKRUH.png" alt="logo">
+                    </a>
+                </div>
+            
+                <div class="wm-flex wm-flex-col wm-align-end">
+                    <div class="wm-flex-center wm-gap-10px wm-mb-5px">
+                        <span class="wm-font-500 wm-font-14px wm-line-135 wm-color-energy">created by</span>
+                        <img src="./assets/images/logo_boomex.png" alt="logo">
+                    </div>
+                    <p class="wm-font-500 wm-font-14px wm-line-135 wm-color-energy">&copy;2025 Agrokruh</p>
                 </div>
             </div>
         </div>

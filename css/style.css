@@ -172,6 +172,10 @@
 
 
 /* Footer section */
+.footer-social-mobile{
+    display: none;
+}
+
 .footer-input{
     padding: 15px 25px;
     border: none;
@@ -192,13 +196,74 @@
 }
 
 .first-name{
-    width: 193px;
+    width: clamp(149px, calc(106.796px + 11.224vw), 193px);
 }
 
-.email-checkbox input{
+
+.custome-radio{
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+}
+.email-checkbox{
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    height: 0;
-    width: 0;
+    height: 0px;
+    width: 0px;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    height: 24px;
+    width: 24px;
+    background-color: var(--color-haze);
+    border-radius: 50%;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-root);
+}
+.email-checkbox:checked ~ .checkmark:after {
+    display: block;
+}
+
+.subscribe-btn-mobile{
+    display: none;
+}
+
+
+.footer-social-icon-a{
+    width: 40.4px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-energy);
+}
+
+.language-btn{
+    transition: color .3s;
+}
+.language-btn.active{
+    color: var(--color-energy);
+}
+.language-btn:hover{
+    color: var(--color-energy);
+}
+
+
+.logo-created-by-mobile{
+    display: none;
 }
