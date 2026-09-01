@@ -20,10 +20,64 @@
 .hero-header-container {
     height: 100%;
     z-index: 1;
+
 }
 
 
 
+
+
+
+
+/* navbar section */
+.nav-ul{
+    padding: 13px 27px 13px 39px;
+    background-color: var(--color-white);
+    border-radius: 30px;
+    box-shadow: 1px 1px 2.9px 0px #00000026;
+    display: flex;
+    align-items: center;
+    gap: 39.5px;
+}
+.nav-ul-li{
+    position: relative;
+}
+.nav-arrow-down{
+    transition: rotate .3s;
+}
+.nav-ul-li:hover .nav-arrow-down{
+    rotate: -180deg;
+}
+
+.nav-ul-li::before{
+    content: "";
+    position: absolute;
+    left: -13px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-stone);
+    border-radius: 50%;
+}
+
+
+.nav-lang-div{
+    padding: 13px 21px;
+    background-color: var(--color-white);
+    box-shadow: 1px 1px 2.9px 0px #00000026;
+    border-radius: 30px;
+}
+
+.nav-lang-btn{
+    transition: color .3s;
+}
+.nav-lang-btn.active{
+    color: var(--color-root);
+}
+.nav-lang-btn:hover{
+    color: var(--color-root);
+}
 
 
 
@@ -56,6 +110,55 @@
 }
 
 
+
+
+
+
+/* slide section 1 */
+.swiper-slide{
+    padding-top: 130px;
+    background-color: var(--color-white);
+}
+.swiper-slide-h3{
+    max-width: 715px;
+}
+
+.slide-p{
+    max-width: 350px;
+
+}
+
+.swiper-pagination{
+    display: flex;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+.swiper-pagination-bullet {
+    width: 40px !important;
+    height: 40px !important;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid var(--color-aqua);
+    color: var(--color-aqua) !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+.swiper-pagination-bullet:hover{
+    background: var(--color-aqua) !important;
+    color: var(--color-white) !important;
+}
+
+.swiper-pagination-bullet-active {
+    color: var(--color-white) !important;
+    background: var(--color-aqua) !important;
+}
 
 
 
@@ -261,6 +364,10 @@
 }
 .language-btn:hover{
     color: var(--color-energy);
+}
+
+.footer-primary-logo{
+    width: 190.52px;
 }
 
 

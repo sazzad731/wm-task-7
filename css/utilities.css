@@ -204,11 +204,17 @@
 .wm-pb-150px{
     padding-bottom: clamp(61px, calc(29.519px + 8.373vw), 150px);
 }
+.wm-pb-126px{
+    padding-bottom: 126px;
+}
 .wm-pt-50px{
     padding-top: 50px;
 }
 .wm-pt-47px{
     padding-top: 47.5px;
+}
+.wm-pt-45px{
+    padding-top: 45px;
 }
 .wm-pb-67px{
     padding-bottom: 67.5px;
@@ -257,6 +263,9 @@
 }
 .wm-gap-10px{
     gap: 10px;
+}
+.wm-gap-8px{
+    gap: 8px;
 }
 .wm-gap-7px{
     gap: 7px;
@@ -433,6 +442,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    width: fit-content;
 }
 .wm-dot-link-dot{
     width: 8px;

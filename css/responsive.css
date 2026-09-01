@@ -12,6 +12,15 @@
         padding-left: 30px;
         padding-right: 30px;
     }
+
+
+    .swiper-slide-div{
+        flex-direction: column;
+        gap: 50px;
+    }
+    .swiper-slide-h3{
+        font-size: clamp(26px, calc(19.907px + 1.62vw), 40px);
+    }
 }
 
 
