@@ -247,6 +247,7 @@
     justify-content: space-between;
     align-items: center;
     height: 675px !important;
+    gap: 60px;
 }
 .swiperTow-pagination-div{
     height: 37px;
@@ -271,6 +272,14 @@
     height: 12px;
     background-color: var(--color-white);
 }
+
+.ton24-img{
+    width: clamp(313px, calc(216.262px + 25.728vw), 525px);
+}
+.slide-circle-img{
+    width: clamp(310px, calc(205.049px + 27.913vw), 540px);
+}
+
 .slide-section-2-hr{
     margin-top: -37px !important;
 }

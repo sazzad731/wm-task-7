@@ -24,6 +24,30 @@
 }
 
 
+
+@media screen and (max-width: 992px) {
+    .slide-2-section, .swiper-tow-slide{
+        height: auto !important;
+    }
+    .swiper-tow-slide{
+        flex-direction: column;
+        padding-bottom: 50px;
+        justify-content: end;
+        align-items: normal;
+    }
+    .slide-section-2-h2{
+        margin-bottom: 20px;
+    }
+    .swiper-tow-slide-img{
+        width: 100%;
+    }
+    .swiper-tow-slide-content{
+        max-width: 100%;
+    }
+}
+
+
+
 @media screen and (max-width: 440px) {
     /* hero section */
     .hero-content{
