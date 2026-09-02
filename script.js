@@ -90,3 +90,48 @@ const swiperThree = new Swiper(".swiperThree", {
     },
   },
 });
+
+
+
+
+
+
+
+
+
+
+const imageSrc = [
+  { url: "./assets/images/Cibuľa.png" },
+  { url: "./assets/images/Reďkovka.png" },
+  { url: "./assets/images/Mrkva.png" },
+  { url: "./assets/images/Paradajka.png" },
+  { url: "./assets/images/Paprika.png" },
+  { url: "./assets/images/Zemiak.png" },
+  { url: "./assets/images/Hrach.png" },
+  { url: "./assets/images/Kapusta.png" },
+  { url: "./assets/images/Baklažán.png" },
+  { url: "./assets/images/Uhorka.png" },
+];
+const swiperFour = new Swiper(".zoznamSwiper", {
+  direction: "vertical",
+  slidesPerView: 1,
+  spaceBetween: 30,
+  mousewheel: true,
+  slideToClickedSlide: true,
+  loop: true,
+  initialSlide: 3,
+  loopAdditionalSlides: 3,
+  centeredSlides: true,
+  mousewheel: {
+    eventsTarget: ".zoznamSwiper-div",
+  },
+  on: {
+    slideChange: function () {
+      let activeIndex = this.realIndex;
+      const image = imageSrc[activeIndex];
+      if (image) {
+        document.querySelector(".zoznam-slide-img").setAttribute("src", image.url)
+      }
+    },
+  },
+});

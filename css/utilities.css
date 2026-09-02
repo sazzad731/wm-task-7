@@ -158,6 +158,9 @@
 .wm-mb-150px{
     margin-bottom: 150px;
 }
+.wm-mb-117px{
+    margin-bottom: 117px;
+}
 .wm-mb-90px{
     margin-bottom: 90px;
 }
@@ -203,6 +206,9 @@
 .wm-mb--23px{
     margin-bottom: clamp(-23.5px, calc(152.889px + -14.699vw), 40px);
 }
+.wm-mb-53px{
+    margin-bottom: 53px;
+}
 
 
 
@@ -215,6 +221,9 @@
 }
 .wm-pb-126px{
     padding-bottom: 126px;
+}
+.wm-pb-123px{
+    padding-bottom: 123px;
 }
 .wm-pt-50px{
     padding-top: 50px;
@@ -431,6 +440,9 @@
 .wm-max-width-350px{
     max-width: 350px;
 }
+.wm-max-width-336px{
+    max-width: 336px;
+}
 .wm-max-width-714px{
     max-width: 714px;
 }
@@ -478,6 +490,9 @@
     cursor: pointer;
 }
 
+.wm-select-none{
+    user-select: none;
+}
 
 .wm-index-2{
     z-index: 2;
