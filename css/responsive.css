@@ -83,6 +83,15 @@
 
 
 
+    .slide-3-footer{
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+    }
+
+
+
+
     /* footer */
     .footer-social-mobile {
         display: block;

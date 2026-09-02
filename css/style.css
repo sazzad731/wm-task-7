@@ -130,8 +130,6 @@
 
 .slide-section-1-pagination{
     display: flex;
-    top: 0 !important;
-    left: 0 !important;
     gap: 10px;
 }
 
@@ -282,6 +280,60 @@
 
 .slide-section-2-hr{
     margin-top: -37px !important;
+}
+
+
+
+
+
+
+
+/* slide section 3 */
+.slide-section-3-slide-content{
+    min-height: 277px;
+    margin-bottom: clamp(50px, calc(6.481px + 11.574vw), 150px);
+}
+.slide-section-3-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.slide-section-3-bullet {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 140%;
+    text-transform: uppercase;
+    border: 1px solid var(--color-root);
+    color: var(--color-root);
+    background: transparent;
+    transition: all .5s;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+    padding: 14.5px 29px;
+}
+
+.slide-section-3-bullet:hover {
+    background: var(--color-root);
+    color: var(--color-white);
+}
+
+.slide-section-3-bullet-active {
+    background: var(--color-root);
+    color: var(--color-white);
+}
+
+.slide-section-3-slide{
+    padding-top: 90px;
+    min-height: 453px;
+    display: flex !important;
+    flex-direction: column;
+}
+
+.slide-3-footer {
+    flex-grow: 1;
+    align-items: flex-end;
 }
 
 

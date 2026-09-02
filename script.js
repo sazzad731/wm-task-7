@@ -66,3 +66,27 @@ const swiperTow = new Swiper(".swiperTow", {
     },
   },
 });
+
+
+
+
+
+const bulletTitles = ["technológia", "NOVINKY", "PRODUKTY", "NAŠA MISIA", "KOMUNITA"];
+const swiperThree = new Swiper(".swiperThree", {
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+  speed: 1500,
+  pagination: {
+    el: ".slide-section-3-pagination",
+    clickable: true,
+    bulletClass: "slide-section-3-bullet",
+    bulletActiveClass: "slide-section-3-bullet-active",
+    renderBullet: function (index, className) {
+      return (
+        '<span class="' + className + '">' + bulletTitles[index] + "</span>"
+      );
+    },
+  },
+});

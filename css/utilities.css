@@ -155,6 +155,9 @@
 
 
 /* margin */
+.wm-mb-150px{
+    margin-bottom: 150px;
+}
 .wm-mb-90px{
     margin-bottom: 90px;
 }
@@ -427,6 +430,9 @@
 }
 .wm-max-width-350px{
     max-width: 350px;
+}
+.wm-max-width-714px{
+    max-width: 714px;
 }
 
 
