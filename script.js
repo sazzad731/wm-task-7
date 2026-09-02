@@ -20,8 +20,30 @@ const swiperOne = new Swiper(".swiperOne", {
 
 
 
+
+
+
+const swiperTowSectionColor = [
+  {
+    color: "#A5C4FF",
+  },
+  {
+    color: "#CED2BB",
+  },
+  {
+    color: "#E7FD83",
+  },
+  {
+    color: "#CED2BB",
+  },
+];
 const swiperTow = new Swiper(".swiperTow", {
-  cssMode: true,
+  effect: "fade",
+  loop: true,
+  fadeEffect: {
+    crossFade: true,
+  },
+  speed: 100,
   navigation: {
     prevEl: ".swiperTow-button-next",
     nextEl: ".swiperTow-button-prev",
@@ -29,6 +51,18 @@ const swiperTow = new Swiper(".swiperTow", {
   pagination: {
     el: ".swiperTow-pagination",
     clickable: true,
+    bulletClass: "swiperTow-pagination-bullet",
+    bulletActiveClass: "swiperTow-pagination-bullet-active",
   },
   keyboard: true,
+  on: {
+    slideChange: function () {
+      let activeIndex = this.realIndex;
+      const color = swiperTowSectionColor[activeIndex];
+      if (color) {
+        document.querySelector(".slide-2-section").style.background =
+          color.color;
+      }
+    },
+  },
 });

@@ -246,6 +246,33 @@
     display: flex !important;
     justify-content: space-between;
     align-items: center;
+    height: 675px !important;
+}
+.swiperTow-pagination-div{
+    height: 37px;
+    display: flex;
+    align-items: end;
+}
+.swiperTow-pagination{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.swiperTow-pagination-bullet{
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-root);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s;
+}
+.swiperTow-pagination-bullet-active{
+    width: 12px;
+    height: 12px;
+    background-color: var(--color-white);
+}
+.slide-section-2-hr{
+    margin-top: -37px !important;
 }
 
 
