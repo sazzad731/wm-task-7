@@ -258,6 +258,9 @@
 .wm-pb-76px{
     padding-bottom: 76px;
 }
+.wm-pb-78px{
+    padding-bottom: 78px;
+}
 .wm-mb-34px{
     margin-bottom: 34px;
 }
@@ -392,6 +395,24 @@
 .wm-position-absolute{
     position: absolute;
 }
+.wm-top-0{
+    top: 0;
+}
+.wm-left-0{
+    left: 0;
+}
+.wm-bottom-0{
+    bottom: 0;
+}
+.wm-right-0{
+    right: 0;
+}
+.wm-translate-50{
+    transform: translate(50%);
+}
+
+
+
 
 
 .wm-text-center {

@@ -91,6 +91,24 @@
 
 
 
+    .zoznam-plodín-section{
+        padding-bottom: 170px;
+    }
+    .zoznam-plodín-section-header{
+        margin-bottom: 60px;
+    }
+    .zoznamSwiper-h6{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .zoznamSwiper-bottom-div{
+        position: absolute;
+        left: 0;
+    }
+
+
+
 
     /* footer */
     .footer-social-mobile {
@@ -130,5 +148,8 @@
     }
     .logo-created-by-mobile{
         display: block;
+    }
+    .wm-mb-75px {
+        margin-bottom: 75.5px;
     }
 }
