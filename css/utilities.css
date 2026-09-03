@@ -91,6 +91,9 @@
 .wm-font-30px{
     font-size: 30px;
 }
+.wm-font-32px{
+    font-size: 32px;
+}
 .wm-font-14px{
     font-size: 14px;
 }
@@ -200,6 +203,9 @@
 .wm-mt-6px{
     margin-top: clamp(1px, calc(-3.796px + 1.276vw), 6px);
 }
+.wm-mt--22px{
+    margin-top: -22px;
+}
 .wm-mb-3px{
     margin-bottom: 3px;
 }
@@ -208,6 +214,9 @@
 }
 .wm-mb-53px{
     margin-bottom: 53px;
+}
+.wm-mb-24px{
+    margin-bottom: 24px;
 }
 
 
@@ -263,6 +272,18 @@
 }
 .wm-mb-34px{
     margin-bottom: 34px;
+}
+.wm-pr-7px{
+    padding-right: 7px;
+}
+.wm-mb-69px{
+    margin-bottom: 69.26px;
+}
+.wm-pt-20px{
+    padding-top: 20px;
+}
+.wm-pb-26px{
+    padding-bottom: 26px;
 }
 
 
@@ -375,6 +396,10 @@
     flex-wrap: wrap;
 }
 
+.wm-self-end{
+    align-self: flex-end;
+}
+
 
 
 
@@ -441,14 +466,17 @@
 .wm-dot-12px{
     width: 12px;
     height: 12px;
+    border-radius: 50%;
 }
 .wm-dot-8px{
     width: 8px;
     height: 8px;
+    border-radius: 50%;
 }
 .wm-dot-14px{
     width: 14px;
     height: 14px;
+    border-radius: 50%;
 }
 
 
@@ -466,6 +494,9 @@
 }
 .wm-max-width-714px{
     max-width: 714px;
+}
+.wm-max-width-174px{
+    max-width: 174px;
 }
 
 
@@ -517,4 +548,8 @@
 
 .wm-index-2{
     z-index: 2;
+}
+
+.wm-height-auto{
+    height: auto;
 }

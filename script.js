@@ -1,3 +1,64 @@
+window.addEventListener("DOMContentLoaded", function () {
+  function handleNavbarDropdown() {
+    const navbarDropdown = document.querySelector(".navbar-dropdown");
+    const navUlLi = document.querySelectorAll(".nav-ul-li");
+    const logoAqua = document.querySelector(".logo-aqua");
+    const logoRoot = document.querySelector(".logo-root");
+    const navBarDropdownDiv = document.querySelectorAll(".navbar-dropdown-div");
+    const menu3Dot = document.querySelectorAll(".menu-3-dot");
+    let activeArrow;
+
+    const dropdownLis = document.querySelectorAll(".li-dropdown");
+
+    navUlLi.forEach((li) => {
+      li.addEventListener("mouseenter", function () {
+        navBarDropdownDiv.forEach((item) => item.classList.remove("active"));
+
+        if (li.classList.contains("li-dropdown")) {
+          navbarDropdown.classList.add("active");
+          logoAqua.style.opacity = "0";
+          logoRoot.style.opacity = "1";
+          activeArrow = li.querySelector(".nav-arrow-down");
+
+          activeArrow.style.rotate = "-180deg"
+
+          const index = Array.from(dropdownLis).indexOf(li);
+          if (index !== -1 && navBarDropdownDiv[index]) {
+            navBarDropdownDiv[index].classList.add("active");
+          }
+        } else {
+          navbarDropdown.classList.remove("active");
+          activeArrow.style.rotate = "0deg";
+          logoAqua.style.opacity = "1";
+          logoRoot.style.opacity = "0";
+        }
+      });
+    });
+    
+    navbarDropdown.addEventListener("mouseleave", function () {
+      navbarDropdown.classList.remove("active");
+      navBarDropdownDiv.forEach((item) => item.classList.remove("active"));
+      activeArrow.style.rotate = "0deg";
+      logoAqua.style.opacity = "1";
+      logoRoot.style.opacity = "0";
+    });
+
+
+    menu3Dot.forEach(dot => {
+      dot.addEventListener("click", function () {
+      if (navbarDropdown.classList.contains("active")) {
+        navbarDropdown.classList.remove("active")
+      } else {
+        navbarDropdown.classList.add("active");
+      }
+    })
+    })
+  }
+
+  handleNavbarDropdown(); 
+})
+
+
 
 
 

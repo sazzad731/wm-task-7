@@ -26,6 +26,37 @@
 
 
 @media screen and (max-width: 992px) {
+    .header{
+        padding-left: 16px;
+        padding-right: 23px;
+        top: 18.75px;
+    }
+    .nav{
+        display: none;
+    }
+    .menu-3-dot-aqua{
+        display: block;
+    }
+    .navbar-dropdown{
+        position: fixed;
+        top: -1000px;
+        left: 0;
+        z-index: 20;
+        align-items: start;
+        justify-content: start;
+        padding: 18.75px 16px !important;
+        min-height: 100vh;
+        transition: all .3s;
+        overflow-y: auto;
+    }
+    .navbar-dropdown.active{
+        top: 0;
+    }
+    .navbar-dropdown-div-desk{
+        display: none;
+    }
+    
+    
     .slide-2-section, .swiper-tow-slide{
         height: auto !important;
     }

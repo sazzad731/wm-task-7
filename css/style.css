@@ -6,6 +6,7 @@
     background-size: cover;
     background-position: center;
     position: relative;
+    overflow: hidden;
 }
 .hero-overlay{
     position: absolute;
@@ -30,8 +31,70 @@
 
 
 /* navbar section */
+.navbar-dropdown{
+    width: 100%;
+    height: 0px;
+    background-color: var(--color-haze);
+    position: relative;
+    z-index: 2;
+    transition: height .3s;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+.navbar-dropdown.active{
+    height: 510px;
+    padding: 0px 35px 51px;
+}
+.header{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.navbar-dropdown-div{
+    display: none;
+    align-items: center;
+    gap: 19px;
+}
+.navbar-dropdown-div.active{
+    display: flex;
+}
+.dropdown-div-item{
+    width: 100%;
+    max-width: 328px;
+    height: 260px;
+    padding: 25.5px 22.05px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.arrow-right-icon-div{
+    width: 55px;
+    height: 55px;
+    background-color: var(--color-white);
+    border-radius: 100px;
+    padding: 20px 25px;
+}
+
+.logo-aqua{
+    transition: opacity .3s;
+}
+
+.logo-root{
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: opacity .3s;
+}
+
+
 .nav-ul{
-    padding: 13px 27px 13px 39px;
+    padding: 0px 27px 0px 39px;
     background-color: var(--color-white);
     border-radius: 30px;
     box-shadow: 1px 1px 2.9px 0px #00000026;
@@ -41,11 +104,13 @@
 }
 .nav-ul-li{
     position: relative;
+    padding: 13px 0px;
+    cursor: pointer;
 }
 .nav-arrow-down{
     transition: rotate .3s;
 }
-.nav-ul-li:hover .nav-arrow-down{
+.nav-ul-li:hover .nav-arrow-down {
     rotate: -180deg;
 }
 
@@ -59,6 +124,11 @@
     height: 8px;
     background-color: var(--color-stone);
     border-radius: 50%;
+    transition: background-color .3s;
+}
+
+.nav-ul-li:hover::before {
+    background-color: var(--color-root);
 }
 
 
@@ -77,6 +147,10 @@
 }
 .nav-lang-btn:hover{
     color: var(--color-root);
+}
+
+.menu-3-dot-aqua{
+    display: none;
 }
 
 
