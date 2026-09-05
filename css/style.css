@@ -36,8 +36,8 @@
     height: 0px;
     background-color: var(--color-haze);
     position: relative;
-    z-index: 2;
-    transition: height .3s;
+    z-index: 3;
+    transition: height .5s;
     overflow: hidden;
     display: flex;
     align-items: end;
@@ -47,12 +47,16 @@
     height: 510px;
     padding: 0px 35px 51px;
 }
+.navbar-dropdown-mobile{
+    display: none;
+}
 .header{
-    position: absolute;
+    position: fixed;
     top: 45px;
     left: 0;
     right: 0;
     z-index: 10;
+    transition: all .5s;
 }
 
 .navbar-dropdown-div{
@@ -62,6 +66,16 @@
 }
 .navbar-dropdown-div.active{
     display: flex;
+}
+.navbar-dropdown-div-mobile{
+    height: 0px;
+    overflow: hidden;
+    transition: all .5s;
+}
+.navbar-dropdown-div-mobile.active{
+    padding-top: 20px;
+    padding-bottom: 26px;
+    transition: all .5s;
 }
 .dropdown-div-item{
     width: 100%;
@@ -124,7 +138,7 @@
     height: 8px;
     background-color: var(--color-stone);
     border-radius: 50%;
-    transition: background-color .3s;
+    transition: background-color .5s;
 }
 
 .nav-ul-li:hover::before {
@@ -140,7 +154,7 @@
 }
 
 .nav-lang-btn{
-    transition: color .3s;
+    transition: color .5s;
 }
 .nav-lang-btn.active{
     color: var(--color-root);
@@ -151,6 +165,26 @@
 
 .menu-3-dot-aqua{
     display: none;
+}
+
+
+.mobile-nav-social{
+    width: 40.4px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-root);
+}
+.mobile-fb{
+    padding: 11px 16.4px 12px 16px;
+}
+.mobile-insta{
+    padding: 10px 10.81px 11px 10.6px;
+}
+.mobile-youtube{
+    padding: 12px 9.21px 13px 10.19px;
+}
+.mobile-linkedin{
+    padding: 10.44px 11.16px 12.94px 12.43px;
 }
 
 
@@ -190,7 +224,7 @@
 
 /* slide section 1 */
 .slide-section-1-slide{
-    padding-top: 130px;
+    padding-top: 90px;
     background-color: var(--color-white);
 }
 .swiper-slide-h3{
@@ -234,6 +268,19 @@
 .slide-section-1-bullet-active {
     color: var(--color-white) !important;
     background: var(--color-aqua) !important;
+}
+
+
+.swiperOne .swiper-slide,
+.swiperThree .swiper-slide {
+    opacity: 0 !important;
+    transition: opacity 0.75s ease-in-out !important;
+}
+
+.swiperOne .swiper-slide-active,
+.swiperThree .swiper-slide-active {
+    opacity: 1 !important;
+    transition-delay: 0.75s !important;
 }
 
 
@@ -363,9 +410,33 @@
 
 
 /* slide section 3 */
+.slide-section-3 {
+    min-height: 663px;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-section-3 .container-1240px {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slide-section-3 .swiperThree {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-section-3 .swiper-wrapper {
+    flex: 1;
+}
+
 .slide-section-3-slide-content{
     min-height: 277px;
-    margin-bottom: clamp(50px, calc(6.481px + 11.574vw), 150px);
+    flex-shrink: 0;
 }
 .slide-section-3-pagination {
     display: flex;
@@ -400,13 +471,13 @@
 
 .slide-section-3-slide{
     padding-top: 90px;
-    min-height: 453px;
+    min-height: calc(663px - 122px) !important;
     display: flex !important;
     flex-direction: column;
 }
 
 .slide-3-footer {
-    flex-grow: 1;
+    margin-top: auto;
     align-items: flex-end;
 }
 

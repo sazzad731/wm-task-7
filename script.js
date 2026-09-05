@@ -6,6 +6,8 @@ window.addEventListener("DOMContentLoaded", function () {
     const logoRoot = document.querySelector(".logo-root");
     const navBarDropdownDiv = document.querySelectorAll(".navbar-dropdown-div");
     const menu3Dot = document.querySelectorAll(".menu-3-dot");
+    const navUlLiMobile = document.querySelectorAll(".nav-ul-li-mobile");
+
     let activeArrow;
 
     const dropdownLis = document.querySelectorAll(".li-dropdown");
@@ -48,11 +50,61 @@ window.addEventListener("DOMContentLoaded", function () {
       dot.addEventListener("click", function () {
       if (navbarDropdown.classList.contains("active")) {
         navbarDropdown.classList.remove("active")
+        document.body.style.overflow = "auto";
       } else {
         navbarDropdown.classList.add("active");
+        document.body.style.overflow = "hidden";
       }
     })
     })
+
+
+    // for mobile device
+    navUlLiMobile.forEach(li => {
+      if (li.classList.contains("li-mobile-dropdown")) {
+        li.addEventListener("click", function () {
+          const navbarDropdownDivMobile = this.querySelector(".navbar-dropdown-div-mobile")
+          activeArrow = li.querySelector(".nav-arrow-down");
+          if (navbarDropdownDivMobile) {
+            if (navbarDropdownDivMobile.classList.contains("active")) {
+              navbarDropdownDivMobile.classList.remove("active");
+              navbarDropdownDivMobile.style.height = "0px";
+              activeArrow.style.rotate = "0deg";
+            } else {
+              navbarDropdownDivMobile.classList.add("active");
+              navbarDropdownDivMobile.style.height = (navbarDropdownDivMobile.scrollHeight + 46) + "px";
+              activeArrow.style.rotate = "-180deg";
+            }
+          }
+        });
+      } else {
+        li.addEventListener("click", function () {
+          navbarDropdown.classList.remove("active")
+        });
+      }
+    })
+
+    
+    
+    let lastScrollTop = 0;
+    const header = document.querySelector(".header");
+
+    window.addEventListener("scroll", () => {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll === 0) {
+        navbarDropdown.style.position = "relative"
+      } else {
+        navbarDropdown.style.position = "fixed";
+        navbarDropdown.style.top = "-5px";
+      }
+      if (currentScroll < lastScrollTop) {
+        header.style.top = "45px";
+      } else {
+        header.style.top = "-500px";
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
   }
 
   handleNavbarDropdown(); 

@@ -1,8 +1,10 @@
 .container-1240px{
+    width: 100%;
     max-width: 1240px;
     margin: 0px auto;
 }
 .container-1370px{
+    width: 100%;
     max-width: 1370px;
     margin: 0px auto;
 }
@@ -96,6 +98,9 @@
 }
 .wm-font-14px{
     font-size: 14px;
+}
+.wm-font-21px{
+    font-size: 21px;
 }
 
 
@@ -234,6 +239,9 @@
 .wm-pb-123px{
     padding-bottom: 123px;
 }
+.wm-pb-90px{
+    padding-bottom: 90px;
+}
 .wm-pt-50px{
     padding-top: 50px;
 }
@@ -323,6 +331,9 @@
 }
 .wm-gap-5px{
     gap: 5px;
+}
+.wm-gap-37px{
+    gap: 37.38px;
 }
 
 
@@ -497,6 +508,13 @@
 }
 .wm-max-width-174px{
     max-width: 174px;
+}
+
+.wm-min-height-173px{
+    min-height: 173px;
+}
+.wm-min-height-160px{
+    min-height: 160px;
 }
 
 
