@@ -274,13 +274,13 @@
 .swiperOne .swiper-slide,
 .swiperThree .swiper-slide {
     opacity: 0 !important;
-    transition: opacity 0.75s ease-in-out !important;
+    transition: opacity 0.3s !important;
 }
 
 .swiperOne .swiper-slide-active,
 .swiperThree .swiper-slide-active {
     opacity: 1 !important;
-    transition-delay: 0.75s !important;
+    transition-delay: 0.3s !important;
 }
 
 
@@ -481,7 +481,22 @@
     align-items: flex-end;
 }
 
+.anim-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition-delay: 0s;
+    
+}
 
+
+.swiper-slide-active .anim-word {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 0.5s;
+    transition-delay: var(--delay);
+}
 
 
 

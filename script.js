@@ -185,6 +185,30 @@ const swiperTow = new Swiper(".swiperTow", {
 
 
 const bulletTitles = ["technológia", "NOVINKY", "PRODUKTY", "NAŠA MISIA", "KOMUNITA"];
+const h3 = document.querySelectorAll(".slide-sec-3-slide-h3");
+h3.forEach(el => {
+  const nodes = Array.from(el.childNodes);
+  let newHTML = "";
+  let wordIndex = 0;
+
+  nodes.forEach(node => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const words = node.textContent.split(/\s+/);
+      words.forEach((word) => {
+        if (word.trim() !== "") {
+          let delay = wordIndex * 0.10;
+          newHTML += `<span class="anim-word" style="--delay: ${delay}s">${word}</span> `;
+          wordIndex++;
+        }
+      });
+    }
+
+    else if (node.nodeType === Node.ELEMENT_NODE) {
+      newHTML += node.outerHTML;
+    }
+  })
+  el.innerHTML = newHTML;
+})
 const swiperThree = new Swiper(".swiperThree", {
   effect: "fade",
   fadeEffect: {
