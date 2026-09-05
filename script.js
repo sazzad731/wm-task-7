@@ -1,114 +1,92 @@
-window.addEventListener("DOMContentLoaded", function () {
-  function handleNavbarDropdown() {
-    const navbarDropdown = document.querySelector(".navbar-dropdown");
-    const navUlLi = document.querySelectorAll(".nav-ul-li");
-    const logoAqua = document.querySelector(".logo-aqua");
-    const logoRoot = document.querySelector(".logo-root");
-    const navBarDropdownDiv = document.querySelectorAll(".navbar-dropdown-div");
-    const menu3Dot = document.querySelectorAll(".menu-3-dot");
-    const navUlLiMobile = document.querySelectorAll(".nav-ul-li-mobile");
+window.addEventListener("DOMContentLoaded", () => {
+  const $ = (sel, ctx = document) => ctx.querySelector(sel);
+  const $$ = (sel, ctx = document) => ctx.querySelectorAll(sel);
 
-    let activeArrow;
+  const navbarDropdown = $(".navbar-dropdown");
+  const navBarDropdownDivs = $$(".navbar-dropdown-div");
+  const dropdownLis = $$(".li-dropdown");
+  const allArrows = $$(".nav-arrow-down");
 
-    const dropdownLis = document.querySelectorAll(".li-dropdown");
+  // helper function
+  const toggleDesktopNav = (isActive) => {
+    navbarDropdown.classList.toggle("active", isActive);
+    $(".logo-aqua").style.opacity = isActive ? "0" : "1";
+    $(".logo-root").style.opacity = isActive ? "1" : "0";
+  };
 
-    navUlLi.forEach((li) => {
-      li.addEventListener("mouseenter", function () {
-        navBarDropdownDiv.forEach((item) => item.classList.remove("active"));
+  // 1. Desktop Nav Hover Logic
+  $$(".nav-ul-li").forEach((li) => {
+    li.addEventListener("mouseenter", () => {
+      navBarDropdownDivs.forEach((d) => d.classList.remove("active"));
+      allArrows.forEach((arrow) => (arrow.style.rotate = "0deg"));
 
-        if (li.classList.contains("li-dropdown")) {
-          navbarDropdown.classList.add("active");
-          logoAqua.style.opacity = "0";
-          logoRoot.style.opacity = "1";
-          activeArrow = li.querySelector(".nav-arrow-down");
+      if (li.classList.contains("li-dropdown")) {
+        toggleDesktopNav(true);
 
-          activeArrow.style.rotate = "-180deg"
+        const currentArrow = $(".nav-arrow-down", li);
+        if (currentArrow) currentArrow.style.rotate = "-180deg";
 
-          const index = Array.from(dropdownLis).indexOf(li);
-          if (index !== -1 && navBarDropdownDiv[index]) {
-            navBarDropdownDiv[index].classList.add("active");
-          }
-        } else {
-          navbarDropdown.classList.remove("active");
-          activeArrow.style.rotate = "0deg";
-          logoAqua.style.opacity = "1";
-          logoRoot.style.opacity = "0";
-        }
-      });
-    });
-    
-    navbarDropdown.addEventListener("mouseleave", function () {
-      navbarDropdown.classList.remove("active");
-      navBarDropdownDiv.forEach((item) => item.classList.remove("active"));
-      activeArrow.style.rotate = "0deg";
-      logoAqua.style.opacity = "1";
-      logoRoot.style.opacity = "0";
-    });
-
-
-    menu3Dot.forEach(dot => {
-      dot.addEventListener("click", function () {
-      if (navbarDropdown.classList.contains("active")) {
-        navbarDropdown.classList.remove("active")
-        document.body.style.overflow = "auto";
+        const div = navBarDropdownDivs[[...dropdownLis].indexOf(li)];
+        if (div) div.classList.add("active");
       } else {
-        navbarDropdown.classList.add("active");
-        document.body.style.overflow = "hidden";
+        toggleDesktopNav(false);
       }
-    })
-    })
+    });
+  });
 
+  navbarDropdown.addEventListener("mouseleave", () => {
+    navBarDropdownDivs.forEach((d) => d.classList.remove("active"));
+    allArrows.forEach((arrow) => (arrow.style.rotate = "0deg"));
+    toggleDesktopNav(false);
+  });
 
-    // for mobile device
-    navUlLiMobile.forEach(li => {
+  // 2. Mobile 3-Dot Menu Logic
+  $$(".menu-3-dot").forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const isActive = navbarDropdown.classList.toggle("active");
+      document.body.style.overflow = isActive ? "hidden" : "auto";
+    });
+  });
+
+  // 3. Mobile Dropdown Logic
+  $$(".nav-ul-li-mobile").forEach((li) => {
+    li.addEventListener("click", () => {
       if (li.classList.contains("li-mobile-dropdown")) {
-        li.addEventListener("click", function () {
-          const navbarDropdownDivMobile = this.querySelector(".navbar-dropdown-div-mobile")
-          activeArrow = li.querySelector(".nav-arrow-down");
-          if (navbarDropdownDivMobile) {
-            if (navbarDropdownDivMobile.classList.contains("active")) {
-              navbarDropdownDivMobile.classList.remove("active");
-              navbarDropdownDivMobile.style.height = "0px";
-              activeArrow.style.rotate = "0deg";
-            } else {
-              navbarDropdownDivMobile.classList.add("active");
-              navbarDropdownDivMobile.style.height = (navbarDropdownDivMobile.scrollHeight + 46) + "px";
-              activeArrow.style.rotate = "-180deg";
-            }
-          }
-        });
-      } else {
-        li.addEventListener("click", function () {
-          navbarDropdown.classList.remove("active")
-        });
-      }
-    })
+        const div = $(".navbar-dropdown-div-mobile", li);
+        const currentArrow = $(".nav-arrow-down", li);
 
-    
-    
+        if (div) {
+          const isActive = div.classList.toggle("active");
+          div.style.height = isActive ? `${div.scrollHeight + 46}px` : "0px";
+          if (currentArrow)
+            currentArrow.style.rotate = isActive ? "-180deg" : "0deg";
+        }
+      } else {
+        navbarDropdown.classList.remove("active");
+      }
+    });
+  });
+
+  // 4. Scroll Logic (Desktop only)
+  if (window.innerWidth > 992) {
     let lastScrollTop = 0;
-    const header = document.querySelector(".header");
+    const header = $(".header");
 
     window.addEventListener("scroll", () => {
-      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll === 0) {
-        navbarDropdown.style.position = "relative"
-      } else {
-        navbarDropdown.style.position = "fixed";
-        navbarDropdown.style.top = "-5px";
-      }
-      if (currentScroll < lastScrollTop) {
-        header.style.top = "45px";
-      } else {
-        header.style.top = "-500px";
-      }
+      const currentScroll = Math.max(window.scrollY, 0);
 
-      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      Object.assign(navbarDropdown.style, {
+        position: currentScroll === 0 ? "relative" : "fixed",
+        top: currentScroll === 0 ? "" : "-5px",
+      });
+
+      if (header) {
+        header.style.top = currentScroll < lastScrollTop ? "45px" : "-500px";
+      }
+      lastScrollTop = currentScroll;
     });
   }
-
-  handleNavbarDropdown(); 
-})
+});
 
 
 

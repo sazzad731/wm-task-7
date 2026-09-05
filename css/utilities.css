@@ -529,11 +529,21 @@
     font-size: 15px;
     line-height: 140%;
     text-transform: uppercase;
+    transition: all .5s;
 }
 .wm-btn-dot{
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    transition: all .5s;
+}
+
+.wm-btn:hover{
+    gap: 14px;
+}
+.wm-btn:hover .wm-btn-dot{
+    width: 8px;
+    height: 8px;
 }
 
 .wm-dot-link{
