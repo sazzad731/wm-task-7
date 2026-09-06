@@ -223,6 +223,9 @@
 .wm-mb-24px{
     margin-bottom: 24px;
 }
+.wm-mb-38px{
+    margin-bottom: 38px;
+}
 
 
 
@@ -296,6 +299,9 @@
 .wm-pl-8px{
     padding-left: 8.62px
 }
+.wm-pr-50px{
+    padding-right: 50px;
+}
 
 
 
@@ -337,6 +343,9 @@
 }
 .wm-gap-37px{
     gap: 37.38px;
+}
+.wm-gap-30px{
+    gap: 30px;
 }
 
 
@@ -470,6 +479,7 @@
     width: 100%;
 }
 
+
 .wm-text-nowrap {
     text-wrap: nowrap;
 }
@@ -525,7 +535,7 @@
 .wm-btn{
     display: flex;
     align-items: center;
-    padding: 14.5px 30px 14.5px 25px;
+    padding: 14.5px 30px 14.5px 47px;
     border-radius: 30px;
     gap: 10px;
     font-weight: 600;
@@ -533,18 +543,21 @@
     line-height: 140%;
     text-transform: uppercase;
     transition: all .5s;
+    position: relative;
 }
-.wm-btn-dot{
+.wm-btn::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: clamp(22.75px, calc(-25.719px + 12.891vw), 31px);
     width: 12px;
     height: 12px;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
     transition: all .5s;
+    background-color: var(--color-root);
 }
-
-.wm-btn:hover{
-    gap: 14px;
-}
-.wm-btn:hover .wm-btn-dot{
+.wm-btn:hover::before{
     width: 8px;
     height: 8px;
 }
@@ -701,6 +714,9 @@
 
 .wm-width-150px{
     width: 150px;
+}
+.wm-width-114px{
+    width: 114px;
 }
 
 .wm-cursor-pointer{

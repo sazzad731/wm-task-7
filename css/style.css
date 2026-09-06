@@ -123,6 +123,8 @@
 }
 .nav-arrow-down{
     transition: rotate .3s;
+    width: 20px;
+    height: 8.33px;
 }
 .nav-ul-li:hover .nav-arrow-down {
     rotate: -180deg;
