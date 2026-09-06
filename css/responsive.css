@@ -1,7 +1,7 @@
 @media screen and (max-width: 1370px) {
     .container-1370px{
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 
@@ -9,8 +9,8 @@
 
 @media screen and (max-width: 1240px) {
     .container-1240px{
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
 
@@ -27,8 +27,9 @@
 
 @media screen and (max-width: 992px) {
     .header{
-        padding-left: 16px;
-        padding-right: 23px;
+        position: relative;
+        padding-left: 8.62px;
+        padding-right: 7px;
         top: 18.75px;
     }
     .nav{
@@ -98,6 +99,13 @@
 }
 
 
+@media screen and (max-width: 750px) {
+    .newsletter-right-div {
+        display: none;
+    }
+}
+
+
 
 @media screen and (max-width: 440px) {
     /* hero section */
@@ -123,12 +131,24 @@
 
 
 
-    .section-header{
-        flex-direction: column;
+    .section-header-div{
+        margin-bottom: 10px;
     }
     .section-header-right-p-div{
-        flex-direction: column;
+        justify-content: end;
         gap: 16px;
+        width: 100%;
+    }
+    .section-header-span-desk{
+        display: none;
+    }
+    .section-header-span-mobile{
+        display: block;
+    }
+
+
+    .wm-font-18px{
+        font-size: 16px;
     }
 
 
@@ -193,9 +213,6 @@
         align-items: center;
         justify-self: center;
         margin-top: 50px;
-    }
-    .newsletter-right-div{
-        display: none;
     }
     .logo-created-by-mobile{
         display: block;

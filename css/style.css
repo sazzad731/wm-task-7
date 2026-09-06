@@ -305,6 +305,10 @@
 
 
 
+.section-header-span-mobile{
+    display: none;
+}
+
 
 
 
@@ -471,7 +475,7 @@
 
 .slide-section-3-slide{
     padding-top: 90px;
-    min-height: calc(663px - 122px) !important;
+    min-height: clamp(541px, calc(729.12px + -13.064vw), 680px) !important;
     display: flex !important;
     flex-direction: column;
 }
@@ -505,6 +509,7 @@
 .zoznam-slide-img-div{
     width: 100%;
     max-width: 610px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -513,7 +518,8 @@
 .zoznam-slide-img{
     width: 100%;
     max-width: 455px;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
 }
 
 .zoznamSwiper{
